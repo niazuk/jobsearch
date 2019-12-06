@@ -22,8 +22,9 @@
         <a class="nav-link" href="{{route('contact')}}" tabindex="-1" aria-disabled="true">Contact Us</a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Job Filter" aria-label="Search">
+    <form class="form-inline my-2 my-lg-0" method="POST" action="/filter">
+      @csrf
+      <input class="form-control mr-sm-2" id="filter" type="text" placeholder="Job Filter" name="filter" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Job Filter</button>
     </form>
   </div>

@@ -35,4 +35,4 @@ Route::get('/job/{job}/edit', 'JobController@edit')->name('job.edit');
 
 Route::put('/job/{job}', 'JobController@update')->name('job.update');
 
-
+Route::post('/filter', 'JobController@jobFilter')->name('filter');

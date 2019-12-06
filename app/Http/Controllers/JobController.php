@@ -87,6 +87,12 @@ class JobController extends Controller
         //
     }
 
+    public function jobFilter(Request $request)
+    {
+        $jobs = Job::latest()->where('title', 'like', '%'.$request->filter.'%')->paginate(2);
+        return view('pages.index',['jobs' => $jobs]);
+    }
+
     protected function validateJob()
     {
         return request()->validate([
