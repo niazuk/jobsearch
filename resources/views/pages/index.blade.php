@@ -7,7 +7,7 @@
 @section('content')
 	<div class="container" style="border-color: #ff0000; box-shadow: 5px;">	
 		<table class="table table-striped">
-			<thead><tr><th>Available Vacancies({{count($jobs)}})</th></tr></thead>
+			<thead><tr><th>Available Vacancies({{$jobs->total()}})</th></tr></thead>
 			<tbody>
 				@foreach($jobs as $job)
 				<tr>
